@@ -1,0 +1,8 @@
+/.git/
+/.idea/
+/node_modules/
+/runtime/
+/vendor/
+/web/assets/
+/.env
+/.DS_Store

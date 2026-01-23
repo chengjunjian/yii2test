@@ -1,0 +1,36 @@
+services:
+  php:
+    image: serversideup/php:7.4-fpm-nginx-alpine
+    ports:
+      - "80:8080"
+    volumes:
+      - .:/var/www/html
+    environment:
+      SSL_MODE: "off"
+      PHP_OPCACHE_ENABLE: "1"
+      NGINX_WEBROOT: /var/www/html/web
+    depends_on:
+      - mariadb
+      - redis
+
+  mariadb:
+    image: mariadb:11
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: linkdb
+      MYSQL_DATABASE: yii2test
+      MYSQL_USER: yii2test
+      MYSQL_PASSWORD: 666666
+    volumes:
+      - db_data:/var/lib/mysql
+
+  redis:
+    image: redis:alpine
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+
+volumes:
+  db_data:
+  redis_data:
