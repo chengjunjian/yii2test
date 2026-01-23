@@ -13,5 +13,12 @@ return [
             'showScriptName' => false,
             'rules' => [],
         ],
+        'db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=mariadb;dbname=yii2test',
+            'username' => 'yii2test',
+            'password' => '666666',
+            'charset' => 'utf8mb4',
+        ],
     ],
 ];

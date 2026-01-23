@@ -22,3 +22,6 @@ docker compose run --rm -u root php composer install
   ],
 
 
+
+maridb 容器是有客户端的 只是不是 mysql， 是 mariadb
+docker compose exec mariadb mariadb -uyii2test -p666666 yii2test

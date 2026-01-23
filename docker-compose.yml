@@ -1,10 +1,16 @@
 services:
   php:
-    image: serversideup/php:7.4-fpm-nginx-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: yii2test-php
     ports:
       - "80:8080"
     volumes:
       - .:/var/www/html
+      - runtime_data:/var/www/html/runtime
+      - assets_data:/var/www/html/web/assets
+      - uploads_data:/var/www/html/web/uploads
     environment:
       SSL_MODE: "off"
       PHP_OPCACHE_ENABLE: "1"
@@ -34,3 +40,6 @@ services:
 volumes:
   db_data:
   redis_data:
+  runtime_data:
+  assets_data:
+  uploads_data:
