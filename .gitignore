@@ -2,3 +2,5 @@
 /runtime/
 /web/assets/
 /composer.lock
+.env
+/commands/.gitkeep

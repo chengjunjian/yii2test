@@ -6,6 +6,9 @@
     "yiisoft/yii2": "^2.0.52",
     "yiisoft/yii2-bootstrap5": "^2.0"
   },
+  "bin": [
+    "yii"
+  ],
   "repositories": [
     {
         "type": "composer",

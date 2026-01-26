@@ -15,6 +15,9 @@ services:
       SSL_MODE: "off"
       PHP_OPCACHE_ENABLE: "1"
       NGINX_WEBROOT: /var/www/html/web
+      DB_DSN: "mysql:host=mariadb;dbname=yii2test"
+      DB_USERNAME: "yii2test"
+      DB_PASSWORD: "666666"
     depends_on:
       - mariadb
       - redis

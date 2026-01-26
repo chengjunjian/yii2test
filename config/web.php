@@ -15,9 +15,9 @@ return [
         ],
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=mariadb;dbname=yii2test',
-            'username' => 'yii2test',
-            'password' => '666666',
+            'dsn' => getenv('DB_DSN') ?: 'mysql:host=mariadb;dbname=yii2test',
+            'username' => getenv('DB_USERNAME') ?: 'yii2test',
+            'password' => getenv('DB_PASSWORD') ?: '666666',
             'charset' => 'utf8mb4',
         ],
     ],
