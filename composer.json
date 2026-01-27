@@ -4,7 +4,8 @@
   "require": {
     "php": ">=7.4",
     "yiisoft/yii2": "^2.0.52",
-    "yiisoft/yii2-bootstrap5": "^2.0"
+    "yiisoft/yii2-bootstrap5": "^2.0",
+    "vlucas/phpdotenv": "^5.0"
   },
   "bin": [
     "yii"

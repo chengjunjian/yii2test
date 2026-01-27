@@ -20,3 +20,4 @@ RUN chown -R www-data:www-data runtime web/assets web/uploads && \
     chmod -R 755 runtime web/assets web/uploads
 
 USER www-data
+

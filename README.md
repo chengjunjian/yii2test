@@ -8,6 +8,8 @@ composer 安装库执行
 
 docker compose run --rm -u root php composer install
 
+因为ai会手工修改 composer.json 文件， 所以要在宿主机执行 docker compose run --rm -u root php composer update，更新 composer.lock 文件
+
 这个项目的仓库配置 ，优先使用华为云
   "repositories": [
     {
@@ -25,3 +27,7 @@ docker compose run --rm -u root php composer install
 
 maridb 容器是有客户端的 只是不是 mysql， 是 mariadb
 docker compose exec mariadb mariadb -uyii2test -p666666 yii2test
+
+测试 php 容器
+docker compose exec php php -v
+
