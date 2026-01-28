@@ -17,7 +17,7 @@ $this->title = 'Yii2 Test App';
     <div class="card shadow-sm">
         <div class="card-header bg-primary text-white">
             <h5 class="mb-0">
-                <i class="fas fa-users me-2"></i>Student List
+                <i class="fas fa-users me-2"></i>Student List 测试提交
             </h5>
         </div>
         <div class="card-body p-0">
